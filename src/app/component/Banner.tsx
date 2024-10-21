@@ -1,9 +1,4 @@
-import React from "react";
-
-// You can define the types for props if you want to pass them to the component
-interface BannerProps {}
-
-const Banner: React.FC<BannerProps> = () => {
+export default function Banner() {
   return (
     <div className="text-slate-700 flex flex-col items-start md:items-center justify-center min-h-screen leading-tight">
       <p className="text-[6rem] font-bold text-slate-400 text-center sm:text-start">
@@ -14,6 +9,4 @@ const Banner: React.FC<BannerProps> = () => {
       </p>
     </div>
   );
-};
-
-export default Banner;
+}
