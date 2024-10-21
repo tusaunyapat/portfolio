@@ -1,6 +1,7 @@
 // components/Card.tsx
 
 // import { list } from "postcss";
+import Image from "next/image";
 import React, { useState } from "react";
 
 interface CardProps {
@@ -35,7 +36,7 @@ const Card: React.FC<CardProps> = ({
       {" "}
       {/* Set fixed width here */}
       {image && (
-        <img className="w-full h-48 object-cover" src={image} alt={title} />
+        <Image className="w-full h-48 object-cover" src={image} alt={title} />
       )}
       <div className="px-6 py-4">
         <div className="flex flex-row justify-between">

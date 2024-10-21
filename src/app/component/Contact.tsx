@@ -9,7 +9,7 @@ import {
 } from "react-icons/fi";
 
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Contact() {
   const controls = useAnimation();

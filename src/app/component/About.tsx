@@ -1,7 +1,7 @@
 "use client";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import Timeline from "./Timeline";
 export default function About() {
   const controls = useAnimation();
