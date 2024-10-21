@@ -10,6 +10,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { name: "About", path: "#about" },
   { name: "Project", path: "#project" },
+  { name: "Experience", path: "#experience" },
   { name: "Contact", path: "#contact" },
 ];
 
@@ -45,7 +46,10 @@ const Navbar: React.FC = () => {
           className={` hidden md:flex md:space-x-6 space-y-4 md:space-y-0 mt-4 md:mt-0 md:items-center`}
         >
           {navItems.map((item) => (
-            <li key={item.name} className="text-lg hover:text-gray-200">
+            <li
+              key={item.name}
+              className="text-lg hover:text-slate-200 hover:bg-slate-700 px-2 rounded-md"
+            >
               <Link href={item.path}>{item.name}</Link>
             </li>
           ))}
