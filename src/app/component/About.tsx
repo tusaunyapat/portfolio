@@ -6,7 +6,7 @@ import Timeline from "./Timeline";
 export default function About() {
   const controls = useAnimation();
   const ref = useRef<HTMLDivElement | null>(null);
-  const [replay, setReplay] = useState(false);
+  // const [replay, setReplay] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +16,10 @@ export default function About() {
 
         if (top < windowHeight * 0.8) {
           controls.start({ opacity: 1, y: 0 });
-          setReplay(true); // Trigger replay when visible
+          // setReplay(true); // Trigger replay when visible
         } else {
           controls.start({ opacity: 0, y: 20 });
-          setReplay(false); // Stop replay when not visible
+          // setReplay(false); // Stop replay when not visible
         }
       }
     };

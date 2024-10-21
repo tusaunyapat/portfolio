@@ -5,7 +5,7 @@ import {
   FiMail,
   FiGithub,
   FiMapPin,
-  FiLinkedin,
+  //   FiLinkedin,
 } from "react-icons/fi";
 
 import { motion, useAnimation } from "framer-motion";
@@ -14,7 +14,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Contact() {
   const controls = useAnimation();
   const ref = useRef<HTMLDivElement | null>(null);
-  const [replay, setReplay] = useState(false);
+  //   const [replay, setReplay] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,10 +24,10 @@ export default function Contact() {
 
         if (top < windowHeight * 0.8) {
           controls.start({ opacity: 1, y: 0 });
-          setReplay(true); // Trigger replay when visible
+          //   setReplay(true); // Trigger replay when visible
         } else {
           controls.start({ opacity: 0, y: 20 });
-          setReplay(false); // Stop replay when not visible
+          //   setReplay(false); // Stop replay when not visible
         }
       }
     };

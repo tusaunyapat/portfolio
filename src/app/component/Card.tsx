@@ -1,6 +1,6 @@
 // components/Card.tsx
 
-import { list } from "postcss";
+// import { list } from "postcss";
 import React, { useState } from "react";
 
 interface CardProps {
