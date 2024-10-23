@@ -32,17 +32,6 @@ export default function About() {
     };
   }, [controls]);
 
-  const icon = {
-    hidden: {
-      pathLength: 0,
-      fill: "rgba(255, 255, 255, 0)",
-    },
-    visible: {
-      pathLength: 1,
-      fill: "rgba(255, 255, 255, 1)",
-    },
-  };
-
   return (
     <div className="flex flex-col justify-center gap-10 px-2 w-full  items-center min-h-screen">
       <motion.div
