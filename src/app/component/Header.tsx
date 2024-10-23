@@ -1,6 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
+import { IoMdArrowDropright } from "react-icons/io";
 
 interface NavItem {
   name: string;
@@ -8,7 +11,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { name: "About", path: "#about" },
+  { name: "About me", path: "#about" },
   { name: "Project", path: "#project" },
   { name: "Experience", path: "#experience" },
   { name: "Contact", path: "#contact" },
@@ -22,8 +25,8 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-slate-100 text-slate-700 p-4 fixed top-0 w-full">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="bg-slate-200 z-[999] shadow-md shadow-slate-200 dark:bg-slate-100 text-slate-700 p-4 fixed top-0 w-full">
+      <div className="container flex justify-between items-center w-full">
         {/* Logo */}
         <div key="home" className="text-lg font-bold hover:text-gray-200">
           <Link href="#home">AUNYAPAT</Link>
@@ -34,11 +37,11 @@ const Navbar: React.FC = () => {
           className="block md:hidden focus:outline-none"
           onClick={toggleMenu}
         >
-          <div className="hamburger space-y-2">
-            <span className="block w-8 h-0.5 bg-slate-700"></span>
-            <span className="block w-8 h-0.5 bg-slate-700"></span>
-            <span className="block w-8 h-0.5 bg-slate-700"></span>
-          </div>
+          {menuOpen ? (
+            <RxCross2 className="text-2xl" />
+          ) : (
+            <RxHamburgerMenu className="text-2xl" />
+          )}
         </button>
 
         {/* Navigation links */}
@@ -64,9 +67,9 @@ const Navbar: React.FC = () => {
           <Link key={item.name} href={item.path}>
             <div
               onClick={toggleMenu}
-              className="block text-lg hover:bg-sky-200 p-2 rounded"
+              className="flex text-lg hover:bg-slate-300 p-2 rounded flex-row items-center"
             >
-              {item.name}
+              <IoMdArrowDropright /> {item.name}
             </div>
           </Link>
         ))}

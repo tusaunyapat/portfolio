@@ -2,6 +2,9 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Card from "./Card";
+import ProjectEmbed from "../assets/project_embed.png";
+import ProjectCoffeeman from "../assets/project_coffeeman.png";
+import ProjectChest from "../assets/project_chest.png";
 
 export default function Project() {
   const controls = useAnimation();
@@ -34,6 +37,18 @@ export default function Project() {
 
   const projectData = [
     {
+      title: "Machine Learning in Healthcare (in process)",
+      content:
+        "Developed a machine learning model to classify chest X-rays as either normal or indicating pneumonia.",
+      image: "",
+      details:
+        "I have developed a machine learning model capable of classifying chest X-rays as either normal or indicating pneumonia (with accuracy 81.7% now). This project involved building a custom model, applying dataset filters, and optimizing the approach using pre-trained models from established libraries, demonstrating my ability to work with complex data-driven tasks.",
+      company: "",
+      time: "September 2024",
+      tools: ["Pytorch", "Kaggle"],
+      image: ProjectChest,
+    },
+    {
       title: "CoffeeMan",
       content:
         "Developed a complex game project using Java with an object-oriented programming (OOP) approach, incorporating principles such as inheritance and polymorphism.",
@@ -43,19 +58,23 @@ export default function Project() {
       company: "",
       time: "December 2023",
       tools: ["Java", "OOP"],
-    },
-    {
-      title: "Machine Learning in Healthcare",
-      content:
-        "Developed a machine learning model to classify chest X-rays as either normal or indicating pneumonia.",
-      image: "",
-      details:
-        "I have developed a machine learning model capable of classifying chest X-rays as either normal or indicating pneumonia. This project involved building a custom model, applying dataset filters, and optimizing the approach using pre-trained models from established libraries, demonstrating my ability to work with complex data-driven tasks.",
-      company: "",
-      time: "September 2024",
-      tools: ["Pytorch", "Kaggle"],
+      repo: "https://github.com/tusaunyapat/Coffee-Man.git",
+      image: ProjectCoffeeman,
     },
 
+    {
+      title: "Iot website",
+      content:
+        "IoT-based system continuously monitors PM2.5 dust levels in the air, providing real-time data directly on website.",
+      image: "",
+      details:
+        "This website provides real-time tracking of PM2.5 dust levels in the air. Our system uses a DHT11 sensor to measure PM2.5 concentrations and environmental factors. The data is sent via NodeMCU to a Firebase real-time database, ensuring live updates and accurate information on air quality. Stay informed with up-to-the-minute readings directly from the sensor, all conveniently displayed on our platform.",
+      company: "",
+      time: "May 2024",
+      tools: ["STM32", "NodeMCU", "React", "Firebase"],
+      repo: "https://github.com/tusaunyapat/embed-lab-project.git",
+      image: ProjectEmbed,
+    },
     // Add more experience objects as needed...
   ];
 
@@ -68,13 +87,14 @@ export default function Project() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className={`text-md items-center flex flex-row justify-center w-full text-base`}
       >
-        <p className="text-[4rem] font-bold">Projects</p>
+        <p className="text-5xl sm:text-7xl font-bold">Projects</p>
       </motion.div>
       <motion.div
         className={`text-md items-center flex flex-col text-base w-full justify-center`}
       >
         {projectData.map((project, index) => (
           <motion.div
+            className="flex flex-col items-center justify-center"
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={replay ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -89,6 +109,7 @@ export default function Project() {
               company={project.company}
               time={project.time}
               buttonText="Show More"
+              repo={project.repo}
             />
           </motion.div>
         ))}

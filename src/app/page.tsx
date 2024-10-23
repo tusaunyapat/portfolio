@@ -7,12 +7,12 @@ import Experience from "./component/Experience";
 import Project from "./component/Project";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] items-start justify-items-center min-h-screen  pb-20 gap-16 px-4 md:px-10 font-[family-name:var(--font-geist-sans)]">
+    <div className="w-full grid grid-rows-[auto_1fr_auto] items-start justify-items-center min-h-screen bg-slate-50 dark:bg-slate-700 pb-20 gap-16 px-4 md:px-10 font-[family-name:var(--font-geist-sans)]">
       {/* Header Section */}
       <Header />
 
       {/* Main Content */}
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full text-slate-700">
         <section id="home" className="min-h-screen p-2 pt-16">
           <Banner />
         </section>

@@ -49,8 +49,8 @@ export default function Contact() {
       className={`text-md items-center flex flex-row justify-center w-full text-base`}
     >
       <div className="min-h-screen py-12 px-6 flex flex-col items-center">
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">
-          Contact Information
+        <h2 className="text-5xl sm:text-7xl font-bold text-gray-900 dark:text-white mb-8">
+          Contact
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl w-full">
@@ -117,7 +117,7 @@ export default function Contact() {
         </div> */}
 
           {/* Address */}
-          <div className=" p-6 rounded-lg shadow-lg flex items-center">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex items-center">
             <FiMapPin className="text-slate-500 w-8 h-8 mr-4" />
             <div>
               <h3 className="text-lg font-semibold text-slate-900 ">Address</h3>

@@ -68,7 +68,7 @@ export default function Experience() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className={`text-md items-center flex flex-row justify-center w-full text-base`}
       >
-        <p className="text-[4rem] font-bold">Experience</p>
+        <p className="text-5xl sm:text-7xl font-bold">Experience</p>
       </motion.div>
       <motion.div
         className={`text-md items-center flex flex-col text-base w-full justify-center`}
@@ -84,7 +84,6 @@ export default function Experience() {
               title={experience.title}
               content={experience.content}
               details={experience.details}
-              image={experience.image}
               tools={experience.tools}
               company={experience.company}
               time={experience.time}

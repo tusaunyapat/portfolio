@@ -32,6 +32,17 @@ export default function About() {
     };
   }, [controls]);
 
+  const icon = {
+    hidden: {
+      pathLength: 0,
+      fill: "rgba(255, 255, 255, 0)",
+    },
+    visible: {
+      pathLength: 1,
+      fill: "rgba(255, 255, 255, 1)",
+    },
+  };
+
   return (
     <div className="flex flex-col justify-center gap-10 px-2 w-full  items-center min-h-screen">
       <motion.div
@@ -41,14 +52,14 @@ export default function About() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className={`text-md items-center flex flex-row justify-center w-full  text-base `}
       >
-        <p className="text-[4rem] font-bold">About</p>
+        <p className="text-5xl sm:text-7xl font-bold">About Me</p>
       </motion.div>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 20 }}
         animate={controls}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className={`text-md items-center flex flex-row  text-base md:w-9/12 justify-center`}
+        className={`text-md items-center md:items-start flex flex-row  text-justify md:w-9/12 justify-center`}
       >
         <p className="text-xl">
           Hi! I’m Tus, a Computer Engineering student with a keen interest in{" "}
@@ -68,7 +79,7 @@ export default function About() {
         initial={{ opacity: 0, y: 20 }}
         animate={controls}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className={`text-md items-start flex flex-col  text-base md:w-9/12 justify-center`}
+        className={`text-md items-start flex flex-col  text-base w-full md:w-9/12 justify-center `}
       >
         <p className="text-[2rem] font-bold mb-4">My Education</p>
         <Timeline />
