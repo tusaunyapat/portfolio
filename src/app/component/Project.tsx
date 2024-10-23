@@ -2,9 +2,9 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Card from "./Card";
-import ProjectEmbed from "../assets/project_embed.png";
-import ProjectCoffeeman from "../assets/project_coffeeman.png";
-import ProjectChest from "../assets/project_chest.png";
+// import ProjectEmbed from "../assets/project_embed.png";
+// import ProjectCoffeeman from "../assets/project_coffeeman.png";
+// import ProjectChest from "../assets/project_chest.png";
 
 export default function Project() {
   const controls = useAnimation();
@@ -46,7 +46,7 @@ export default function Project() {
       company: "",
       time: "September 2024",
       tools: ["Pytorch", "Kaggle"],
-      image: ProjectChest,
+      img: "../../../public/assets/project_chest.png",
     },
     {
       title: "CoffeeMan",
@@ -59,7 +59,7 @@ export default function Project() {
       time: "December 2023",
       tools: ["Java", "OOP"],
       repo: "https://github.com/tusaunyapat/Coffee-Man.git",
-      image: ProjectCoffeeman,
+      img: "../../../public/assets/project_coffeeman.png",
     },
 
     {
@@ -73,7 +73,7 @@ export default function Project() {
       time: "May 2024",
       tools: ["STM32", "NodeMCU", "React", "Firebase"],
       repo: "https://github.com/tusaunyapat/embed-lab-project.git",
-      image: ProjectEmbed,
+      img: "../../../public/assets/project_coffeeman.png",
     },
     // Add more experience objects as needed...
   ];
@@ -104,7 +104,7 @@ export default function Project() {
               title={project.title}
               content={project.content}
               details={project.details}
-              image={project.image}
+              img={project.image}
               tools={project.tools}
               company={project.company}
               time={project.time}

@@ -1,13 +1,13 @@
 // components/Card.tsx
 
 import Image from "next/image";
-import { StaticImageData } from "next/image";
+// import { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 interface CardProps {
   title: string;
   content: string;
-  image?: StaticImageData; // Optional image URL
+  img?: string; // Optional image URL
   company?: string;
   time?: string;
   details?: string; // Optional details to show when expanded
@@ -19,7 +19,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({
   title,
   content,
-  image,
+  img,
   company,
   time,
   details,
@@ -37,10 +37,10 @@ const Card: React.FC<CardProps> = ({
     <div className="w-full lg:w-[60rem] rounded overflow-hidden shadow-lg bg-white mb-10">
       {" "}
       {/* Set fixed width here */}
-      {image && (
+      {img && (
         <Image
           className="w-full h-48 md:h-96 object-cover"
-          src={image}
+          src={img}
           alt={title}
         />
       )}
