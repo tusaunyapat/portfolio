@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-slate-200 z-[999] shadow-md shadow-slate-200 dark:bg-slate-100 text-slate-700 p-4 fixed top-0 w-full">
+    <nav className="bg-slate-200 z-[999] shadow-md flex justify-center shadow-slate-200 dark:bg-slate-100 text-slate-700 p-4 fixed top-0 w-full">
       <div className="container flex justify-between items-center w-full">
         {/* Logo */}
         <div key="home" className="text-lg font-bold hover:text-gray-200">

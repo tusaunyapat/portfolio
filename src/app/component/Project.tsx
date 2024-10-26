@@ -45,8 +45,20 @@ export default function Project() {
         "I have developed a machine learning model capable of classifying chest X-rays as either normal or indicating pneumonia (with accuracy 81.7% now). This project involved building a custom model, applying dataset filters, and optimizing the approach using pre-trained models from established libraries, demonstrating my ability to work with complex data-driven tasks.",
       company: "",
       time: "September 2024",
-      tools: ["Pytorch", "Kaggle"],
-      img: "../../../public/assets/project_chest.png",
+      tools: ["Deep Learning", "Pytorch", "RESNET"],
+      img: "/assets/project_chest.png",
+    },
+    {
+      title: "Stock Prediction with LSTM",
+      content:
+        "Developed a machine learning model to predict and forecast the price of stocks in the future",
+      image: "",
+      details:
+        "I have developed a predictive model using Long Short-Term Memory (LSTM) networks to forecast stock prices. This model effectively captures temporal dependencies in historical price data, allowing it to predict future movements accurately. The LSTM architecture enhances performance by maintaining long-range dependencies, making it well-suited for time series analysis and providing valuable insights for investment decisions.",
+      company: "",
+      time: "October 2024",
+      tools: ["Deep Learning", "LSTM", "yfinance"],
+      img: "/assets/project_stock.png",
     },
     {
       title: "CoffeeMan",
@@ -57,9 +69,9 @@ export default function Project() {
         "During my academic journey, I undertook a game development project using Java, where I applied object-oriented programming (OOP) principles such as inheritance and polymorphism. This experience allowed me to strengthen my understanding of modular design and algorithmic efficiency, as I built a complex, interactive game. It demonstrated my ability to manage multiple interconnected components, optimize performance, and develop maintainable code—a skill set I am eager to bring to new challenges in software development.",
       company: "",
       time: "December 2023",
-      tools: ["Java", "OOP"],
+      tools: ["Game Development", "Java", "OOP"],
       repo: "https://github.com/tusaunyapat/Coffee-Man.git",
-      img: "../../../public/assets/project_coffeeman.png",
+      img: "/assets/project_coffeeman.png",
     },
 
     {
@@ -71,9 +83,16 @@ export default function Project() {
         "This website provides real-time tracking of PM2.5 dust levels in the air. Our system uses a DHT11 sensor to measure PM2.5 concentrations and environmental factors. The data is sent via NodeMCU to a Firebase real-time database, ensuring live updates and accurate information on air quality. Stay informed with up-to-the-minute readings directly from the sensor, all conveniently displayed on our platform.",
       company: "",
       time: "May 2024",
-      tools: ["STM32", "NodeMCU", "React", "Firebase"],
+      tools: [
+        "Embedded System",
+        "Web Development",
+        "STM32",
+        "NodeMCU",
+        "React",
+        "Firebase",
+      ],
       repo: "https://github.com/tusaunyapat/embed-lab-project.git",
-      img: "../../../public/assets/project_coffeeman.png",
+      img: "/assets/project_embed.png",
     },
     // Add more experience objects as needed...
   ];
@@ -104,7 +123,7 @@ export default function Project() {
               title={project.title}
               content={project.content}
               details={project.details}
-              img={project.image}
+              img={project.img}
               tools={project.tools}
               company={project.company}
               time={project.time}

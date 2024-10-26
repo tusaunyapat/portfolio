@@ -42,6 +42,8 @@ const Card: React.FC<CardProps> = ({
           className="w-full h-48 md:h-96 object-cover"
           src={img}
           alt={title}
+          width={1000}
+          height={800}
         />
       )}
       <div className="px-6 py-4">
@@ -95,7 +97,11 @@ const Card: React.FC<CardProps> = ({
         ) : null}
         <button
           onClick={toggleExpand}
-          className="bg-slate-500 text-sm text-white font-bold py-2 px-4 rounded hover:bg-slate-700 transition duration-200"
+          className={` text-sm  font-bold py-2 px-4 rounded hover:bg-slate-700 transition duration-200 ${
+            isExpanded
+              ? "bg-slate-600 text-white"
+              : "bg-slate-50 text-slate-500 border border-sm border-slate-500"
+          }`}
         >
           {isExpanded ? "Show Less" : buttonText}
         </button>

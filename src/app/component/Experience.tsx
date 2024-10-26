@@ -55,6 +55,15 @@ export default function Experience() {
       time: "June 2024",
       tools: ["Figma"],
     },
+    {
+      title: "Teacher Assistant",
+      content: "one of TAs team in subject of Computer Engineering Essential",
+      image: "",
+      details:
+        "my session is Front-end Development part. Helping Prof. to teach the students about the basics of HTML, CSS, Js and phaser library",
+      company: "Computer Engineering, Chula",
+      time: "August 2024 - Present",
+    },
 
     // Add more experience objects as needed...
   ];

@@ -33,7 +33,7 @@ export default function About() {
   }, [controls]);
 
   return (
-    <div className="flex flex-col justify-center gap-10 px-2 w-full  items-center min-h-screen">
+    <div className="flex flex-col justify-start gap-10 px-2 w-full  items-center min-h-screen">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 20 }}
@@ -53,8 +53,8 @@ export default function About() {
         <p className="text-xl">
           Hi! I’m Tus, a Computer Engineering student with a keen interest in{" "}
           <span className="font-bold">web development</span> and{" "}
-          <span className="font-bold">software engineering</span>. Currently in
-          my third year, I’ve gained experience in data structures, algorithms,
+          <span className="font-bold">machine learning</span>. Currently in
+          third year, I’ve gained experience in data structures, algorithms,
           software and hardware development, as well as{" "}
           <span className="-bold">machine learning</span> . I’m passionate about
           creating innovative web solutions and exploring data engineering. I’m
