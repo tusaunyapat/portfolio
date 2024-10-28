@@ -9,11 +9,6 @@ export default function About() {
   const ref = useRef<HTMLDivElement | null>(null);
   // const [replay, setReplay] = useState(false);
 
-  const openPdf = () => {
-    // Replace with your PDF URL (can be a public file in /public or a direct URL)
-    const pdfUrl = "/resume28102024.pdf"; // place 'sample.pdf' in the public folder
-    window.open(pdfUrl, "_blank");
-  };
   useEffect(() => {
     const handleScroll = () => {
       if (ref.current) {
