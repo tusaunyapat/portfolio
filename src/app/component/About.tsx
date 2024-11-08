@@ -1,6 +1,7 @@
 "use client";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 // import { useState } from "react";
 import Link from "next/link";
 import Timeline from "./Timeline";
@@ -34,13 +35,13 @@ export default function About() {
   }, [controls]);
 
   return (
-    <div className="flex flex-col justify-start gap-10 px-2 w-full  items-center min-h-screen pt-16">
+    <div className="flex flex-col justify-center gap-10 px-2 w-full  items-center min-h-screen pt-16">
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 0 }}
         animate={controls}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className={`text-md items-center flex flex-row justify-center w-full  text-base `}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className={`text-md items-center flex flex-row justify-center w-full text-base `}
       >
         <p className="text-5xl sm:text-7xl font-bold">About Me</p>
       </motion.div>
@@ -77,8 +78,22 @@ export default function About() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className={`text-md items-start flex flex-col  text-base w-full md:w-9/12 justify-center `}
       >
-        <p className="text-[2rem] font-bold mb-4">My Education</p>
+        <p className="text-[2rem] font-bold my-4">My Education</p>
         <Timeline />
+        <div className="my-10">
+          <p className="text-[2rem] font-bold mt-10">My Certificate</p>
+          <Image
+            alt="ML cert."
+            src="/assets/ml.png"
+            width={800}
+            height={600}
+            className="my-4"
+          />
+          <p>
+            I have learned Supervised Machine learning : Regression and
+            Classification on Coursera and graded 99.26% within 7 days.
+          </p>
+        </div>
       </motion.div>
     </div>
   );
