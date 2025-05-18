@@ -6,36 +6,40 @@ import Contact from "./component/Contact";
 import Experience from "./component/Experience";
 import Project from "./component/Project";
 import Footer from "./component/Footer";
+
+import styles from "./styles/home.module.css";
 export default function Home() {
   return (
-    <div className="w-full grid grid-rows-[auto_1fr_auto] items-start justify-items-center min-h-screen bg-slate-50 dark:bg-slate-700  font-[family-name:var(--font-geist-sans)]">
+    <div className="w-full grid grid-rows-[auto_1fr_auto] items-start justify-items-center min-h-screen bg-slate-950   font-[family-name:var(--font-geist-sans)]">
       {/* Header Section */}
-      <Header />
+      {/* <Header /> */}
 
       {/* Main Content */}
-      <div className="flex flex-col w-full text-slate-700 px-4 md:px-10">
-        <section id="home" className="min-h-screen p-2 pt-16">
+      <div className="flex flex-col w-full h-screen text-slate-700 px-4 md:px-10 snap-y snap-mandatory overflow-scroll scrollbar-hide scroll-smooth">
+        {/* <section id="home" className="min-h-screen h-full p-2 snap-start">
           <Banner />
         </section>
-
-        <section id="about" className="min-h-screen p-2">
+        <section id="about" className="min-h-screen h-full p-2 snap-start">
           <About />
         </section>
-
-        <section id="project" className="min-h-screen  p-2 pt-24">
+        <section id="project" className="min-h-screen h-full p-2 snap-start">
           <Project />
         </section>
-
-        <section id="experience" className="min-h-screen p-2 pt-24">
+        <section id="experience" className="min-h-screen h-full p-2 snap-start">
           <Experience />
         </section>
-
-        <section id="contact" className="min-h-screen  p-2 pt-24">
+        <section id="contact" className="min-h-screen h-full p-2 snap-start">
           <Contact />
-        </section>
+        </section> */}
+        <Project />
+        <Project />
+        <Project />
+        <Project />
+        <Project />
+        <Project />
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

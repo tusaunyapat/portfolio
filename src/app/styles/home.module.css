@@ -1,0 +1,24 @@
+.slideSection {
+  -webkit-animation: slideSection 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slideSection 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes slideSection {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0deg);
+    transform: translateY(0) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-150px) rotateX(-90deg);
+    transform: translateY(-150px) rotateX(-90deg);
+  }
+}
+@keyframes slideSection {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0deg);
+    transform: translateY(0) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-150px) rotateX(-90deg);
+    transform: translateY(-150px) rotateX(-90deg);
+  }
+}
