@@ -1,6 +1,5 @@
 "use client";
-import { useRef } from "react";
-
+import Image from "next/image";
 const projects = [
   {
     title: "Chest X-ray Pneumonia Detection",
@@ -73,7 +72,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       <div className="w-full h-full transition-transform duration-500 [transform-style:preserve-3d] peer-checked:[transform:rotateY(180deg)] flex-1 relative">
         {/* Front Side */}
         <div className="absolute inset-0 backface-hidden rounded-xl shadow-lg flex flex-col justify-between bg-slate-800">
-          <img
+          <Image
             src={project.image}
             alt={project.title}
             className="rounded-lg mb-4 w-full h-40 object-cover"
@@ -86,7 +85,9 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
               {project.description}
             </p>
             <label
-              htmlFor={`flip-${project.title.replace(/\s+/g, "-").toLowerCase()}`}
+              htmlFor={`flip-${project.title
+                .replace(/\s+/g, "-")
+                .toLowerCase()}`}
               className="mt-auto inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300 cursor-pointer text-center"
             >
               View Details
@@ -134,7 +135,6 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 }
 
 export default function Project() {
-
   const dataScienceProjects = projects.filter(
     (p) => p.category === "Data Science"
   );
