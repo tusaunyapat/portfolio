@@ -134,7 +134,6 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 }
 
 export default function Project() {
-  const scrollRef = useRef<HTMLDivElement>(null);
 
   const dataScienceProjects = projects.filter(
     (p) => p.category === "Data Science"

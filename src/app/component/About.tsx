@@ -1,5 +1,4 @@
 "use client";
-import styles from "../styles/about.module.css";
 export default function About() {
   return (
     <div className=" w-full min-h-screen flex flex-col items-center justify-center p-8 leading-tight">
